@@ -11,7 +11,8 @@ Copy Dockerfile, docker-compose.yml and docker-entrypoint.sh
 
 FROM ruby:2.7
 
-# Install nodejs
+# Install nodejs V 14
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
 RUN apt-get update -qq && apt-get install -y nodejs
 
 # Add Yarn repository
